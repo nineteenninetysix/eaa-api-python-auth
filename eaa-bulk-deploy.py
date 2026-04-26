@@ -1,3 +1,7 @@
+##########################################
+##     Authentication section start     ##
+##########################################
+
 import requests
 from akamai.edgegrid import EdgeGridAuth
 from urllib.parse import urljoin
@@ -20,6 +24,15 @@ session.auth = EdgeGridAuth(
     client_secret=CLIENT_SECRET,
     access_token=ACCESS_TOKEN
 )
+
+##########################################
+##     Authentication section ends      ##
+##########################################
+
+
+##########################################
+##      Reporting example start         ##
+##########################################
 
 # Generate the list of apps with pending changes
 # If you want to limit this to certain amount of apps, add max_apps so the function definition looks as such:
@@ -88,3 +101,7 @@ if __name__ == "__main__":
         print("\nAll deployments complete.")
     else:
         print("\nNo apps require deployment.")
+
+##########################################
+##       Reporting example ends         ##
+##########################################
